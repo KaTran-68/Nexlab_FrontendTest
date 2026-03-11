@@ -2,6 +2,8 @@
 
 Ứng dụng chat real-time được xây dựng với React, TypeScript và Vite. Hỗ trợ đa tài khoản, đa ngôn ngữ, giao diện sáng/tối và responsive trên mọi thiết bị.
 
+🔗 **Demo:** [https://nexlabchatapp.vercel.app/](https://nexlabchatapp.vercel.app/)
+
 ---
 
 ## Công nghệ sử dụng
