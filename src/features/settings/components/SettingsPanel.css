@@ -1,0 +1,117 @@
+.settings-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: var(--bg-secondary);
+  overflow-y: auto;
+}
+
+.settings-panel__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 32px;
+}
+
+.settings-panel__section {
+  margin-bottom: 28px;
+}
+
+.settings-panel__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.settings-panel__options {
+  display: flex;
+  gap: 10px;
+}
+
+.settings-panel__option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.settings-panel__option:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.settings-panel__option--active {
+  border-color: var(--accent-color);
+  background: var(--accent-bg);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .settings-panel__option--active {
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.15);
+}
+
+.settings-panel__rename {
+  display: flex;
+  gap: 10px;
+}
+
+.settings-panel__rename-input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.settings-panel__rename-input:focus {
+  border-color: var(--accent-color);
+}
+
+.settings-panel__rename-btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.settings-panel__rename-btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.settings-panel__rename-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1023px) {
+  .settings-panel {
+    padding: 20px 16px;
+  }
+
+  .settings-panel__options {
+    flex-wrap: wrap;
+  }
+}
